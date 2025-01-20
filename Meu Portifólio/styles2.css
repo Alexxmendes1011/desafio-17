@@ -1,0 +1,257 @@
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Espaçador para compensar o cabeçalho */
+.header-spacer {
+    height: 80px; /* Ajuste este valor para corresponder à altura real do cabeçalho */
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ff5733;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover nos links de navegação */
+header nav ul li a:hover {
+    color: #ff5733;
+    transform: translateY(-2px);
+}
+
+/* Seções principais */
+.section {
+    padding: 120px 20px; /* Ajuste para compensar o cabeçalho fixo */
+    text-align: center;
+}
+
+/* Seção de Apresentação */
+#sobre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 50px 20px;
+}
+
+#sobre .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+#sobre .content {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+#sobre h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#sobre h4 {
+    font-size: 1.1rem;
+    color: #777;
+}
+
+#sobre .image {
+    flex: 1;
+    max-width: 40%;  /* Limitar a largura do contêiner da imagem */
+    text-align: center;
+}
+
+#sobre .image img {
+    width: 50%;
+    max-width:100;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+#sobre .image img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Seção de Projetos */
+#projetos {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+}
+
+#projetos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #777;
+}
+
+/* Seção de Contato */
+#contato {
+    background-color: #2d87f0;
+    color: #fff;
+    padding: 80px 20px;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links li {
+    margin-left: 25px;
+}
+
+.social-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+    color: #ff5733;
+}
+
+button {
+    padding: 15px 40px;
+    background-color: #ff5733;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e14a27;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #sobre .content,
+    #sobre .image {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    #sobre .image img {
+        max-width: 250px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
